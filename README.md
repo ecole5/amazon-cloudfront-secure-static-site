@@ -116,7 +116,7 @@ https://s3.amazonaws.com/solution-builders-us-east-1/amazon-cloudfront-secure-st
 3. Run the following command to package a build artifact.
 
     ```shell
-    make package-static
+ make package-static
     ```
 
 4. Copy your website content into the **www** folder.
@@ -144,6 +144,10 @@ https://s3.amazonaws.com/solution-builders-us-east-1/amazon-cloudfront-secure-st
         --capabilities CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \
         --parameter-overrides  DomainName=<your domain name> SubDomain=<your website subdomain> HostedZoneId=<hosted zone id>
     ```
+
+
+If you have already built template and have a local packaged.template file do this. The template file is coupled with the artificates generated on S3.
+
 
 8. [Optional] Run the following command to deploy the packaged CloudFormation template to a CloudFormation stack with a domain apex.
 
